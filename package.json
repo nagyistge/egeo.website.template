@@ -4,8 +4,8 @@
   "description": "Official documentation about the Visual Guidelines of Egeo.",
   "main": "index.html",
   "scripts": {
-    "doc": "grunt doc",
-    "serve": "grunt serve"
+    "dist": "grunt dist",
+    "watch": "grunt sass-watch"
   },
   "author": "Alex R Chies (alejandrorodriguez@stratio.com)",
   "license": "ISC",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Stratio/egeo.visual.guidelines"
+    "url": "https://github.com/Stratio/egeo.website.template"
   },
   "dependencies": {
     "egeo.ui.base": "git://github.com/Stratio/egeo.ui.base.git#master",
