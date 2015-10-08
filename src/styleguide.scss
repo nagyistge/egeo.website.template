@@ -77,6 +77,11 @@ h3 + h4 {
 		color: white;
 	}
 
+	&--type {
+		background: get-color(a1);
+		color: white;
+	}
+
 	&--immutable,
 	&--not-supported,
 	&--untested {
