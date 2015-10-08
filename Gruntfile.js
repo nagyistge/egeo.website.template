@@ -18,11 +18,8 @@
   time-grunt......................Measure the time used in each subtask
   grunt-contrib-sass..............Sass compiler
   grunt-contrib-watch.............Watcher to automatize tasks if files changed
-  grunt-batch.....................Execute bat files
   grunt-contrib-clean.............Clean files and directories
   grunt-contrib-copy..............Copy files and directories
-  grunt-contrib-connect...........Creates a local webserver
-
 
 */
 
