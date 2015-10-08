@@ -111,6 +111,7 @@ module.exports = function (grunt) {
         files: [
           // Includes font files within path and its sub-directories
           {expand: true, cwd: '<%= app.egeoBase %>', src: ['<%= app.assets %>/**'], dest: '<%= app.dist %>/public'},
+          {expand: true, cwd: '<%= app.vendors %>', src: ['**/*'], dest: '<%= app.dist %>'},
           {expand: true, cwd: '<%= app.src %>', src: ['<%= app.assets %>/**'], dest: '<%= app.dist %>/public'}
         ],
       },
