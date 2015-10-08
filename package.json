@@ -1,7 +1,7 @@
 {
-  "name": "egeo.visual.guidelines",
+  "name": "egeo.website.template",
   "version": "0.1.0",
-  "description": "Official documentation about the Visual Guidelines of Egeo.",
+  "description": "Official Egeo KSS template.",
   "main": "index.html",
   "scripts": {
     "dist": "grunt dist",
