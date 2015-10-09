@@ -15,6 +15,9 @@
 @import '../node_modules/egeo.ui.base/dist/sass/utils/utils.text';
 @import '../node_modules/egeo.ui.base/dist/sass/utils/utils.clearfix';
 
+@import '../node_modules/egeo.ui.base/dist/sass/components/component/components.component';
+@import '../node_modules/egeo.ui.base/dist/sass/components/button/components.button';
+
 .version {
 	color: egeo-get-color(n5);
 	font-size: egeo-get-font-size(small);
