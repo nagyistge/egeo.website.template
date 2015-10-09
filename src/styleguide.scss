@@ -157,7 +157,7 @@ h3 + h4 {
 .text {}
 
 @each $color-name, $color in $egeo-colors {
-	.color-block-#{$color-name} {
+	.color-block--#{$color-name} {
 		background: $color;
 	}
 
