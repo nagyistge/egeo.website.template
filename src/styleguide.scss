@@ -72,19 +72,22 @@ h3 + h4 {
     padding: .2em .7em;
 
 	&--default,
-	&--tested {
+	&--tested,
+	&--ok {
 		background: get-color(e1);
 		color: white;
 	}
 
-	&--type {
+	&--type,
+	&--warn {
 		background: get-color(a1);
 		color: white;
 	}
 
 	&--immutable,
 	&--not-supported,
-	&--untested {
+	&--untested,
+	&--danger {
 		background: get-color(e3);
 		color: white;
 	}
