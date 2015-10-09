@@ -16,16 +16,16 @@
 @import '../node_modules/egeo.ui.base/dist/sass/utils/utils.clearfix';
 
 .version {
-	color: get-color(n5);
-	font-size: get-font-size(small);
+	color: egeo-get-color(n5);
+	font-size: egeo-get-font-size(small);
     text-align: right;
     margin-top: -30px;
     margin-right: 2px;
-    font-family: get-font(open-sans);
+    font-family: egeo-get-font(open-sans);
 }
 
 h3 {
-	color: get-color(a1) !important;
+	color: egeo-get-color(a1) !important;
 	font-weight: normal !important;
 	margin: 60px 0 15px !important;
 }
@@ -52,7 +52,7 @@ h3 + h4 {
 
 .compatibility {
 	font-family: monospace;
-	font-size: get-font-size(small);
+	font-size: egeo-get-font-size(small);
 	margin-top: 30px;
 }
 
@@ -67,20 +67,20 @@ h3 + h4 {
 
 .tag {
 	display: inline-block;
-	font-size: get-font-size(small);
+	font-size: egeo-get-font-size(small);
 	margin: 0 .5rem 0 0;
     padding: .2em .7em;
 
 	&--default,
 	&--tested,
 	&--ok {
-		background: get-color(s1);
+		background: egeo-get-color(s1);
 		color: white;
 	}
 
 	&--type,
 	&--warn {
-		background: get-color(t1);
+		background: egeo-get-color(t1);
 		color: white;
 	}
 
@@ -88,7 +88,7 @@ h3 + h4 {
 	&--not-supported,
 	&--untested,
 	&--danger {
-		background: get-color(s3);
+		background: egeo-get-color(s3);
 		color: white;
 	}
 }
