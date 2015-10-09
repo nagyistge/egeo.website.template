@@ -154,9 +154,15 @@ h3 + h4 {
 	width: 100%;
 }
 
+.text {}
+
 @each $color-name, $color in $egeo-colors {
 	.color-block-#{$color-name} {
 		background: $color;
+	}
+
+	.text--#{$color-name} {
+		color: $color;
 	}
 }
 
