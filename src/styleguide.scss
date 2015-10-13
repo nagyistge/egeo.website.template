@@ -163,10 +163,10 @@ h3 + h4 {
 }
 
 .typo-block {
-	@include set-font-families;
-	@include set-font-sizes;
-	@include set-font-weights;
-	@include set-line-heights;
+	@include egeo-set-font-families;
+	@include egeo-set-font-sizes;
+	@include egeo-set-font-weights;
+	@include egeo-set-line-heights;
 
 	//border: 1px solid lightgray;
 	box-sizing: border-box;
