@@ -23,6 +23,10 @@
 		a {
 			&.egeo-c-button {
 				display: inline-block;
+				
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
