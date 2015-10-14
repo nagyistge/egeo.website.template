@@ -1,23 +1,23 @@
-@import '../node_modules/egeo.ui.base/dist/sass/settings/settings';
-@import '../node_modules/egeo.ui.base/dist/sass/settings/settings.colors';
-@import '../node_modules/egeo.ui.base/dist/sass/settings/settings.fonts';
-@import '../node_modules/egeo.ui.base/dist/sass/settings/settings.icons';
-@import '../node_modules/egeo.ui.base/dist/sass/settings/settings.typography';
+@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings';
+@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings.colors';
+@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings.fonts';
+@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings.icons';
+@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings.typography';
 
-@import '../node_modules/egeo.ui.base/dist/sass/tools/tools.log';
-@import '../node_modules/egeo.ui.base/dist/sass/tools/tools.maps';
-@import '../node_modules/egeo.ui.base/dist/sass/tools/tools.layers';
-@import '../node_modules/egeo.ui.base/dist/sass/tools/tools.colors';
-@import '../node_modules/egeo.ui.base/dist/sass/tools/tools.typography';
+@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.log';
+@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.maps';
+@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.layers';
+@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.colors';
+@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.typography';
 
-@import '../node_modules/egeo.ui.base/dist/sass/utils/utils.alignments';
-@import '../node_modules/egeo.ui.base/dist/sass/utils/utils.floats';
-@import '../node_modules/egeo.ui.base/dist/sass/utils/utils.text';
-@import '../node_modules/egeo.ui.base/dist/sass/utils/utils.clearfix';
+@import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.alignments';
+@import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.floats';
+@import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.text';
+@import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.clearfix';
 
-@import '../node_modules/egeo.ui.base/dist/sass/components/component/components.component';
-@import '../node_modules/egeo.ui.base/dist/sass/components/icon/components.icon';
-@import '../node_modules/egeo.ui.base/dist/sass/components/button/components.button';
+@import '../node_modules/egeo.ui.base/dist/egeo/components/component/components.component';
+@import '../node_modules/egeo.ui.base/dist/egeo/components/icon/components.icon';
+@import '../node_modules/egeo.ui.base/dist/egeo/components/button/components.button';
 
 #kss-node  {
 	.kss-description { 
