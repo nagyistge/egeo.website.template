@@ -27,6 +27,17 @@
 
 
 #kss-node  {
+	.kss-menu,
+	.kss-menu-child {
+		> .kss-menu-item {
+			> a {
+				> .kss-name {
+					text-align: left;
+				}
+			}
+		}
+	}
+
 	.kss-title {
 		text-transform: none;
 	}
