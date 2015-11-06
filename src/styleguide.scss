@@ -24,7 +24,13 @@
 
 @import '../node_modules/egeo.ui.base/dist/egeo/objects/media/objects.media';
 
+
+
 #kss-node  {
+	.kss-title {
+		text-transform: none;
+	}
+
 	.kss-description { 
 		a {
 			&.egeo-c-button {
