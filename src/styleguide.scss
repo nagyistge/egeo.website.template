@@ -15,6 +15,9 @@
 @import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.text';
 @import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.clearfix';
 
+@import '../node_modules/egeo.ui.base/dist/egeo/objects/media/objects.media';
+@import '../node_modules/egeo.ui.base/dist/egeo/objects/box-shadow/objects.box-shadow';
+
 @import '../node_modules/egeo.ui.base/dist/egeo/components/component/components.component';
 @import '../node_modules/egeo.ui.base/dist/egeo/components/icon/components.icon';
 @import '../node_modules/egeo.ui.base/dist/egeo/components/button/components.button';
@@ -23,9 +26,6 @@
 @import '../node_modules/egeo.ui.base/dist/egeo/components/dropdown/components.dropdown';
 @import '../node_modules/egeo.ui.base/dist/egeo/components/buttongroup/components.buttongroup';
 @import '../node_modules/egeo.ui.base/dist/egeo/components/popover/components.popover';
-
-@import '../node_modules/egeo.ui.base/dist/egeo/objects/media/objects.media';
-
 
 
 #kss-node  {
