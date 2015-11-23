@@ -151,21 +151,18 @@ h3 + h4 {
 			border-bottom: 1px solid #997722;
 			font-weight: normal;
 			padding: 10px 0;
+
+			td {
+				text-align: center;
+			}
 		}
 
 		td {
 			padding: 5px 15px;
-			text-align: center;
 		}
 
 		tr:nth-child(even) {
 			background-color: #ececec;
-		}
-
-		tbody {
-			td {
-				text-align: left;
-			}
 		}
 	}
 }
