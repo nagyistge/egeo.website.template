@@ -32,16 +32,6 @@
 @import '../node_modules/egeo.ui.base/dist/egeo/components/input/components.input';
 @import '../node_modules/egeo.ui.base/dist/egeo/components/label/components.label';
 
-code {
-	color: #990000;
-}
-
-pre {
-	code {
-		color: black;
-	}
-}
-
 #kss-node  {
 	.kss-menu,
 	.kss-menu-child {
@@ -70,6 +60,16 @@ pre {
 				&:hover {
 					text-decoration: none;
 				}
+			}
+		}
+
+		code {
+			color: #990000;
+		}
+
+		pre {
+			code {
+				color: black;
 			}
 		}
 	}
