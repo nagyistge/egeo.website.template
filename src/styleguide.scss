@@ -81,7 +81,7 @@
 
 .version {
 	color: egeo-get-color(n5);
-	font-size: egeo-get-font-size(small);
+	font-size: egeo-get-font-size(body_small);
     text-align: right;
     margin-top: -30px;
     margin-right: 2px;
@@ -116,7 +116,7 @@ h3 + h4 {
 
 .compatibility {
 	font-family: monospace;
-	font-size: egeo-get-font-size(small);
+	font-size: egeo-get-font-size(body_small);
 	margin-top: 30px;
 }
 
@@ -131,7 +131,7 @@ h3 + h4 {
 
 .tag {
 	display: inline-block;
-	font-size: egeo-get-font-size(small);
+	font-size: egeo-get-font-size(body_small);
 	margin: 0 .5rem 0 0;
     padding: .2em .7em;
     white-space: nowrap;
