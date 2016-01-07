@@ -1,0 +1,109 @@
+// tools.log
+//
+// A logger library implemented over the version created by Hugo Giraudel
+// in his article 
+// [Using @error responsibly in Sass](http://www.sitepoint.com/using-error-responsibly-in-sass/)
+// at sitepoint.
+//
+// The log includes a mixin and a function with the same name. This is 
+// a hack needed to allow the log can be called from a function due to
+// Sass doesn't allow calling mixins inside functions.
+//
+// **Note**: This module cannot be tested due to the current systems of testing
+// for Sass doesn't allow to test console outputs or compilation breaks.
+//
+// ## Variables
+//
+// | var 											| default 	| desc 																																							|
+// |------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="egeo-u-tx-align--left">$egeo-log-debug</div> 	| No 		| <div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show a debug message in the console.</div> 	|
+// | <div class="egeo-u-tx-align--left">$egeo-log-warn</div> 	| No 		| <div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show a warn message in the console.</div> 		|
+// | <div class="egeo-u-tx-align--left">$egeo-log-error</div> 	| No 		| <div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show an error message in the console.</div> 	|
+//
+// ## Functions
+//
+// ### egeo-log($message, $type: $egeo-log-debug) - the function
+//
+// <span class="tag tag--type">@function</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span>
+//
+// The function log launches the directive `@debug`, `@warn` or `@error` depending on
+// the parameter `$type` passed to the function. It detects if the directive
+// @error is supported (Sass 3.3+) and provides an alternative for lower versions.
+//
+// | parameters										| <div class="egeo-u-nowrap">default value</div> 	| desc 																																																|
+// |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="egeo-u-tx-align--left">$message</div> 	| No 				| <div class="egeo-u-tx-align--left">The message we want to show in the console.</div> 																													|
+// | <div class="egeo-u-tx-align--left">$type</div> 		| $egeo-log-debug		| <div class="egeo-u-tx-align--left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`.</div> |
+// 
+// #### Usage
+//
+// If we want to use the logger inside a function we have to 
+// use a hack due to the Sass limitations. We should have a
+// code like the one below:
+//
+// ```
+//	@function myFunction() {
+//		...
+//		@if @log('My log message', $egeo-log-error) {}
+//		...
+// }
+// ```
+//
+// <div class="compatibility">Compatibility untested.</div>
+//
+// ### egeo-log($message, $type: $egeo-log-debug) - the mixin
+//
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span>
+//
+// Does exactly the same than the function but you can call it
+// like showed in the Usage section.
+//
+// | parameters										| <div class="egeo-u-nowrap">default value</div> 	| desc 																																																|
+// |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="egeo-u-tx-align--left">$message</div> 	| No 				| <div class="egeo-u-tx-align--left">The message we want to show in the console.</div> 																													|
+// | <div class="egeo-u-tx-align--left">$type</div> 		| $egeo-log-debug		| <div class="egeo-u-tx-align--left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`.</div> |
+//
+// #### Usage
+//
+// ```
+//	...
+//	@include egeo-log('My log message', $egeo-log-error);
+//	...
+// ```
+//
+// <div class="compatibility">Compatibility untested.</div>
+//
+// Styleguide 3.3
+
+$egeo-log-debug: 'debug';
+$egeo-log-warn: 'warn';
+$egeo-log-error: 'error';
+
+@function egeo-log($message, $type: $egeo-log-debug) {
+	@if $type == $egeo-log-debug {
+		@debug $message;
+	} @else if $type == $egeo-log-warn {
+		@warn $message;
+	} @else if $type == $egeo-log-error {
+		@if feature-exists('at-error') == true {
+			@error $message;
+		} @else {
+			@warn $message;
+		
+			// Because functions cannot be called anywhere in Sass,
+			// we need to hack the call in a dummy condition.
+			@if noop() {}
+		}
+	} @else {
+		@warn 'The type #{type} not exist in the log library.'; 
+	}
+
+	@return true;
+}
+
+@mixin egeo-log($message, $type: $egeo-log-debug) {
+  // Because functions cannot be called anywhere in Sass,
+  // we need to hack the call in a dummy condition.
+  // There are other ways to do this, such as `log: log(..)`.
+  @if egeo-log($message, $type) {}
+}

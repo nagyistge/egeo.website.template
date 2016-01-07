@@ -1,0 +1,28 @@
+$this: '#{$egeo-namespace}c-dropdown';
+
+@mixin egeo-c-dropdown {
+    &__menu {
+        display: none;
+        @if $egeo-c-dropdown__menu---width { width: $egeo-c-dropdown__menu---width; }
+    }
+
+    &--open {
+        display: block;
+    }
+
+    &__item {
+        display: block;
+    }
+
+    &__caret {
+        @if $egeo-c-dropdown__caret---color { color: $egeo-c-dropdown__caret---color; }
+    }
+}
+
+@if variable-exists(egeo-c-dropdown) {
+    @if $egeo-c-dropdown {
+        .#{$this} {
+            @include egeo-c-dropdown;
+        }
+    }
+}

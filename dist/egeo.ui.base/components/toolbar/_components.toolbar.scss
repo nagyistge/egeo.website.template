@@ -1,0 +1,106 @@
+// Toolbar
+//
+// <span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span>
+//
+// The Toolbar Component is a container of items which will be added one behind the other.
+//
+// ### egeo-c-toolbar
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
+//
+// Injects the general behavior and properties of the class Toolbar to other
+// components of the UI Kit.
+//
+// #### Usage
+//
+// ```
+// .test {
+//      @include egeo-c-toolbar;
+// }
+// ```
+// Will product the next result:
+// ```
+// .test {
+//      box-sizing: border-box;
+//      display: inline-block;
+// }
+//
+// .test__item {
+//      margin: 0 0 0 8px;
+// }
+//
+// .test__item:first-child {
+//      margin: 0;
+// }
+// ```
+//
+// #### Example
+//
+// ```
+// <span class="egeo-c-toolbar">
+//      <button>Opt 1</button>
+//      <button>Opt 2</button>
+//      <button>Opt 3</button>
+// </span>
+// ```
+//
+// <span class="egeo-c-toolbar">
+//      <button>Opt 1</button>
+//      <button>Opt 2</button>
+//      <button>Opt 3</button>
+// </span>
+//
+// ## The egeo-c-toolbar AngularJS directive
+//
+// <span class="tag tag--type">@directive</span><span class="tag tag--untested">untested</span>
+//
+// Egeo provides an AngularJS directive to create toolbars with ease. The directive is restricted
+// to HTML Element and called `egeo-c-toolbar`. The Toolbar component is a container so it allows to use
+// transclude content.  Below you can see the properties exposed:
+//
+// | Property                                           | Default value                                  | Description                                                                   |
+// | -------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------- |
+// | <div class="egeo-u-tx-align--left">at-right</div>  | <div class="egeo-u-tx-align--left">false</div> | <div class="egeo-u-tx-align--left">If the content will be right floated</div> |
+//
+//
+// ### Usage
+//
+// Take a look to the samples shown below to see how the properties could be used and combined to get different results:
+//
+// ```
+// <egeo-c-toolbar>
+//   <egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="main-2" data-icon-left="icon-cog" data-icon-right="icon-arrow2_down" data-label="AngularJS Button"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="main-3" data-label="AngularJS Button"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button>
+// </egeo-c-toolbar>
+// ```
+//
+// ---
+// <egeo-c-toolbar>
+//   <egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="main-2" data-icon-left="icon-cog" data-icon-right="icon-arrow2_down" data-label="AngularJS Button"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="main-3" data-label="AngularJS Button"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button>
+// </egeo-c-toolbar>
+//
+// ---
+//
+// ## Variables exposed to theming
+//
+// | Variable                                                                       | Default value                                                        | Description                                                                      |
+// | ------------------------------------------------------------------------------ | -------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+// | <span class="egeo-u-nowrap">$egeo-c-toolbar</span>                             | <span class="egeo-u-nowrap">`true` </span>                           | Tells Egeo if the class egeo-c-toolbar should be included in the CSS.            |
+// | <span class="egeo-u-nowrap">$egeo-c-toolbar---margin</span>                    | <span class="egeo-u-nowrap">`0 0 0 8px` </span>                      | Set the margin by default for the whole items in the toolbar.                    |
+// | <span class="egeo-u-nowrap">$egeo-c-toolbar--first-child---margin</span>       | <span class="egeo-u-nowrap">`0` </span>                              | Set the margin by default for the first element in the toolbar (typically zero). |
+//
+// ## Dependencies
+//  
+// * [component](section-7.html#section-7.1)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.5
+
+@import 'vars';
+@import 'rules';

@@ -1,40 +1,40 @@
-@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings';
-@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings.colors';
-@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings.fonts';
-@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings.icons';
-@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings.typography';
-@import '../node_modules/egeo.ui.base/dist/egeo/settings/settings.layers';
+@import '../vendors/egeo.ui.base/settings/settings';
+@import '../vendors/egeo.ui.base/settings/settings.colors';
+@import '../vendors/egeo.ui.base/settings/settings.fonts';
+@import '../vendors/egeo.ui.base/settings/settings.icons';
+@import '../vendors/egeo.ui.base/settings/settings.typography';
+@import '../vendors/egeo.ui.base/settings/settings.layers';
 
-@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.log';
-@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.maps';
-@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.layers';
-@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.colors';
-@import '../node_modules/egeo.ui.base/dist/egeo/tools/tools.typography';
+@import '../vendors/egeo.ui.base/tools/tools.log';
+@import '../vendors/egeo.ui.base/tools/tools.maps';
+@import '../vendors/egeo.ui.base/tools/tools.layers';
+@import '../vendors/egeo.ui.base/tools/tools.colors';
+@import '../vendors/egeo.ui.base/tools/tools.typography';
 
-@import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.alignments';
-@import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.floats';
-@import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.text';
-@import '../node_modules/egeo.ui.base/dist/egeo/utils/utils.clearfix';
+@import '../vendors/egeo.ui.base/utils/utils.alignments';
+@import '../vendors/egeo.ui.base/utils/utils.floats';
+@import '../vendors/egeo.ui.base/utils/utils.text';
+@import '../vendors/egeo.ui.base/utils/utils.clearfix';
 
-@import '../node_modules/egeo.ui.base/dist/egeo/objects/media/objects.media';
-@import '../node_modules/egeo.ui.base/dist/egeo/objects/box-shadow/objects.box-shadow';
+@import '../vendors/egeo.ui.base/objects/media/objects.media';
+@import '../vendors/egeo.ui.base/objects/box-shadow/objects.box-shadow';
 
-@import '../node_modules/egeo.ui.base/dist/egeo/components/component/components.component';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/icon/components.icon';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/button/components.button';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/row/components.row';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/toolbar/components.toolbar';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/dropdown/components.dropdown';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/buttongroup/components.buttongroup';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/popover/components.popover';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/form/components.form';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/formgroup/components.formgroup';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/formcontrol/components.formcontrol';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/input/components.input';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/label/components.label';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/message/components.message';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/checkbox/components.checkbox';
-@import '../node_modules/egeo.ui.base/dist/egeo/components/helpbox/components.helpbox';
+@import '../vendors/egeo.ui.base/components/component/components.component';
+@import '../vendors/egeo.ui.base/components/icon/components.icon';
+@import '../vendors/egeo.ui.base/components/button/components.button';
+@import '../vendors/egeo.ui.base/components/row/components.row';
+@import '../vendors/egeo.ui.base/components/toolbar/components.toolbar';
+@import '../vendors/egeo.ui.base/components/dropdown/components.dropdown';
+@import '../vendors/egeo.ui.base/components/buttongroup/components.buttongroup';
+@import '../vendors/egeo.ui.base/components/popover/components.popover';
+@import '../vendors/egeo.ui.base/components/form/components.form';
+@import '../vendors/egeo.ui.base/components/formgroup/components.formgroup';
+@import '../vendors/egeo.ui.base/components/formcontrol/components.formcontrol';
+@import '../vendors/egeo.ui.base/components/input/components.input';
+@import '../vendors/egeo.ui.base/components/label/components.label';
+@import '../vendors/egeo.ui.base/components/message/components.message';
+@import '../vendors/egeo.ui.base/components/checkbox/components.checkbox';
+@import '../vendors/egeo.ui.base/components/helpbox/components.helpbox';
 
 
 #kss-node  {

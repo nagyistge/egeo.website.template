@@ -1,0 +1,36 @@
+// Component
+//
+// <span class="tag tag--danger">internal</span><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span>
+//
+// The component Component is the parent class of all components in
+// the UI Kit. It is an abstrac class that it means that it doesn't
+// exist as a CSS class itself but as a mixin that can be inherited
+// in any component.
+//
+// ### egeo-c-component
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
+//
+// Injects the general behavior and properties of the abstract class Component to other
+// components of the UI Kit.
+//
+// #### Usage
+//
+// ```
+// .test {
+// 		@include egeo-c-component;
+// }
+// ```
+// Will product the next result:
+// ```
+// .test {
+// 		box-sizing: border-box;
+//      position: relative;
+// }
+// ```
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.1
+
+@import 'rules';
