@@ -45,9 +45,10 @@ module.exports = function (grunt) {
     dist: 'dist',             // Folder of the distributable deliverables.
     styleguide: 'styleguide', // Warning: This name is used to reference files 
                               // and folders.
+    ksstemplate: 'kss-template',       // Folder of the vendors not included in npm or bower
     vendors: 'vendors',       // Folder of the vendors not included in npm or bower
     npm: 'node_modules',       // Folder of the npm components
-    egeoBase: 'node_modules/egeo.ui.base/dist/',        // Folder of the Egeo UI Base Framework
+    egeoBase: 'vendors/egeo.ui.base/',        // Folder of the Egeo UI Base Framework
     assets: 'assets'
   };
 
@@ -66,7 +67,7 @@ module.exports = function (grunt) {
           outputStyle: 'compressed' // Minify the Sass as much as possible
         },
         files: {
-          '<%= app.dist %>/public/<%= app.styleguide %>.css': 'src/<%= app.styleguide %>.scss'
+          '<%= app.dist %>/<%= app.ksstemplate %>/public/<%= app.styleguide %>.css': 'src/<%= app.styleguide %>.scss'
         }
       }
     },
@@ -108,9 +109,9 @@ module.exports = function (grunt) {
       dist: {
         files: [
           // Includes font files within path and its sub-directories
-          {expand: true, cwd: '<%= app.egeoBase %>', src: ['<%= app.assets %>/**'], dest: '<%= app.dist %>/public'},
-          {expand: true, cwd: '<%= app.vendors %>', src: ['**/*'], dest: '<%= app.dist %>'},
-          {expand: true, cwd: '<%= app.src %>', src: ['<%= app.assets %>/**'], dest: '<%= app.dist %>/public'}
+          {expand: true, cwd: '<%= app.vendors %>', src: ['<%= app.ksstemplate %>/**', '<%= app.ksstemplate %>/*'], dest: '<%= app.dist %>'},
+          {expand: true, cwd: '<%= app.egeoBase %>', src: ['assets/**', 'assets/*'], dest: '<%= app.dist %>/<%= app.ksstemplate %>/public'},
+          {expand: true, cwd: '<%= app.src %>', src: ['<%= app.assets %>/**'], dest: '<%= app.dist %>/<%= app.ksstemplate %>/public'}
         ],
       },
     }
