@@ -37,6 +37,7 @@
 @import '../vendors/egeo.ui.base/components/helpbox/components.helpbox';
 @import '../vendors/egeo.ui.base/components/combobox/components.combobox';
 @import '../vendors/egeo.ui.base/components/radiobutton/components.radiobutton';
+@import '../vendors/egeo.ui.base/components/header/components.header';
 
 
 #kss-node  {
@@ -55,7 +56,7 @@
 		text-transform: none;
 	}
 
-	.kss-description { 
+	.kss-description {
 		a {
 			&.egeo-c-button {
 				display: inline-block;
@@ -63,7 +64,7 @@
 				&.egeo-c-button--main-1 {
 					color: white;
 				}
-				
+
 				&:hover {
 					text-decoration: none;
 				}

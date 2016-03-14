@@ -1,5 +1,5 @@
 /*
-  
+
   GruntJS task runner for Stratio UI Kit Styleguide
 
   author: Alejandro Rodriguez (alejandrorodriguez@stratio.com)
@@ -36,14 +36,14 @@ module.exports = function (grunt) {
 
     Note that the bat command needs to be typed exactly as it will be executed, so
     it doesn't support the use of vars inside the command. Then, keep in mind that
-    if you change the paths, you should check the bat command to ensure that all 
+    if you change the paths, you should check the bat command to ensure that all
     will be executed as expected. Check in the "batch" subtask.
 
   */
   var appConfig = {
     src: 'src',               // Folder of the source
     dist: 'dist',             // Folder of the distributable deliverables.
-    styleguide: 'styleguide', // Warning: This name is used to reference files 
+    styleguide: 'styleguide', // Warning: This name is used to reference files
                               // and folders.
     ksstemplate: 'kss-template',       // Folder of the vendors not included in npm or bower
     vendors: 'vendors',       // Folder of the vendors not included in npm or bower
@@ -72,14 +72,14 @@ module.exports = function (grunt) {
       }
     },
 
-    /* 
+    /*
 
-      Watch task to automatically refresh the documentation when any Sass file 
+      Watch task to automatically refresh the documentation when any Sass file
       changes in any subfolder.
 
-        Warning: Sometimes it fails on Windows due to the antivirus is checking 
-        the files and are blocked. So it is needed create another change in a 
-        Sass file to the watch repeat the task and write the compiled 
+        Warning: Sometimes it fails on Windows due to the antivirus is checking
+        the files and are blocked. So it is needed create another change in a
+        Sass file to the watch repeat the task and write the compiled
         documentation properly.
 
     */
@@ -88,9 +88,9 @@ module.exports = function (grunt) {
         files: ['<%= app.src %>/*.scss', '<%= app.src %>/**/*.scss'], // Files to watch
         tasks: ['dist'],                                               // Taks to execute when changes detected
         options: {
-          spawn: true,  // If the spawn property is established to false, the 
-                        // system is faster but also  more prone to fail due to 
-                        // it opens a second thread to treat the files and can 
+          spawn: true,  // If the spawn property is established to false, the
+                        // system is faster but also  more prone to fail due to
+                        // it opens a second thread to treat the files and can
                         // result in the warning explained above.
         },
       },
@@ -101,11 +101,19 @@ module.exports = function (grunt) {
       options: {
         force: true
       },
-      dist: ['<%= app.dist %>']
+      dist: ['<%= app.dist %>'],
+      egeo: ['<%= app.vendors %>/egeo.ui.base']
     },
 
     /* It copies the vendors needed to the documentation be viewed properly. */
     copy: {
+      egeo: {
+        files: [
+          // Includes font files within path and its sub-directories
+          {expand: true, cwd: '../egeo.ui.base/dist/egeo', src: ['**/*', '*'], dest: '<%= app.vendors %>/egeo.ui.base'},
+          {expand: true, cwd: '../egeo.ui.base/dist/docs/public', src: ['assets/**/*', 'assets/*'], dest: '<%= app.vendors %>/egeo.ui.base'}
+        ]
+      },
       dist: {
         files: [
           // Includes font files within path and its sub-directories
@@ -113,7 +121,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: '<%= app.egeoBase %>', src: ['assets/**', 'assets/*'], dest: '<%= app.dist %>/<%= app.ksstemplate %>/public'},
           {expand: true, cwd: '<%= app.src %>', src: ['<%= app.assets %>/**'], dest: '<%= app.dist %>/<%= app.ksstemplate %>/public'}
         ],
-      },
+      }
     }
   });
 
@@ -133,10 +141,15 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('dist', [
-    'clean', // Clean the directory to ensure all files are generated 
+    'clean', // Clean the directory to ensure all files are generated
              // from scratch
     'copy',  // Copy files needed
     'sass'   // Generate custom CSS to customize the documentation
+  ]);
+
+  grunt.registerTask('update-vendors', [
+    'clean:egeo',
+    'copy:egeo'
   ]);
 
   grunt.registerTask('default', [
