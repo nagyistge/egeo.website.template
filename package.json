@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "dist": "grunt dist",
-    "watch": "grunt sass-watch"
+    "watch": "grunt sass-watch",
+    "update": "grunt update-vendors"
   },
   "author": "Alex R Chies (alejandrorodriguez@stratio.com)",
   "license": "ISC",
