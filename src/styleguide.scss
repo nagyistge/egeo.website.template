@@ -39,6 +39,7 @@
 @import '../vendors/egeo.ui.base/components/radiobutton/components.radiobutton';
 @import '../vendors/egeo.ui.base/components/header/components.header';
 @import '../vendors/egeo.ui.base/components/badge/components.badge';
+@import '../vendors/egeo.ui.base/components/user-dropdown/components.user-dropdown';
 
 #kss-node  {
 	.kss-menu,
@@ -69,6 +70,11 @@
 		ul {
 			margin: 0 0 0 15px;
 			padding: 0;
+
+			&.egeo-c-header__tools {
+				display: inline-block;
+				margin: 0;
+			}
 		}
 
 		a {
