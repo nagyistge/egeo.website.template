@@ -40,6 +40,7 @@
 @import '../vendors/egeo.ui.base/components/header/components.header';
 @import '../vendors/egeo.ui.base/components/badge/components.badge';
 @import '../vendors/egeo.ui.base/components/user-dropdown/components.user-dropdown';
+@import '../vendors/egeo.ui.base/components/dropdown-box/components.dropdown-box';
 
 #kss-node  {
 	.kss-menu,
@@ -74,6 +75,13 @@
 			&.egeo-c-header__tools {
 				display: inline-block;
 				margin: 0;
+			}
+
+			&.egeo-c-dropdown-box {
+				list-style: none;
+				margin: 0 0 0 -5px;
+				padding: 5px 0;
+				position: absolute;
 			}
 		}
 
