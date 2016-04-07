@@ -110,8 +110,7 @@ module.exports = function (grunt) {
       egeo: {
         files: [
           // Includes font files within path and its sub-directories
-          {expand: true, cwd: '../egeo.ui.base/dist/egeo', src: ['**/*', '*'], dest: '<%= app.vendors %>/egeo.ui.base'},
-          {expand: true, cwd: '../egeo.ui.base/dist/docs/public', src: ['assets/**/*', 'assets/*'], dest: '<%= app.vendors %>/egeo.ui.base'}
+          {expand: true, cwd: '../egeo.ui.base/dist/egeo', src: ['**/*', '*'], dest: '<%= app.vendors %>/egeo.ui.base'}
         ]
       },
       dist: {
@@ -119,7 +118,8 @@ module.exports = function (grunt) {
           // Includes font files within path and its sub-directories
           {expand: true, cwd: '<%= app.vendors %>', src: ['<%= app.ksstemplate %>/**', '<%= app.ksstemplate %>/*'], dest: '<%= app.dist %>'},
           {expand: true, cwd: '<%= app.egeoBase %>', src: ['assets/**', 'assets/*'], dest: '<%= app.dist %>/<%= app.ksstemplate %>/public'},
-          {expand: true, cwd: '<%= app.src %>', src: ['<%= app.assets %>/**'], dest: '<%= app.dist %>/<%= app.ksstemplate %>/public'}
+          {expand: true, cwd: '<%= app.src %>', src: ['<%= app.assets %>/**'], dest: '<%= app.dist %>/<%= app.ksstemplate %>/public'},
+          {expand: true, cwd: 'vendors/egeo.ui.base/vendors', src: ['fonts/**'], dest: '<%= app.dist %>/<%= app.ksstemplate %>/public/assets'}
         ],
       }
     }
@@ -141,9 +141,9 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('dist', [
-    'clean', // Clean the directory to ensure all files are generated
+    'clean:dist', // Clean the directory to ensure all files are generated
              // from scratch
-    'copy',  // Copy files needed
+    'copy:dist',  // Copy files needed
     'sass'   // Generate custom CSS to customize the documentation
   ]);
 
