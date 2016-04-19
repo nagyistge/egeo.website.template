@@ -6,7 +6,8 @@ $this: '#{$egeo-namespace}c-header';
     @if $egeo-c-header---background { background: $egeo-c-header---background; }
     @if $egeo-c-header---color { color: $egeo-c-header---color; }
     @if $egeo-c-header---padding { padding: $egeo-c-header---padding; }
-    margin: 0 0 50px;
+    @if $egeo-c-header---margin { margin: $egeo-c-header---margin; }
+    //margin: 0 0 50px;
 
     &:before {
         background: egeo-get-color(a3);
@@ -125,6 +126,16 @@ $this: '#{$egeo-namespace}c-header';
     }
 
     @include menu-max;
+
+    &--submenu-shadow {
+        &::after {
+            content: '';
+            background: egeo-get-color(n2);
+            display: block;
+            height: 45px;
+            margin: 20px -30px -20px -30px;
+        }
+    }
 
     &__submenu {
         font-size: $egeo-c-header__submenu---font-size;
