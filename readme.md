@@ -12,6 +12,30 @@ git clone https://github.com/Stratio/egeo.website.template.git
 npm install
 ```
 
+### With Npm
+
+Include the template dependency in the *dependencies* section of your package.json file:
+```
+  "dependencies": {
+    ...
+    "egeo.ui.base": "git://github.com/Stratio/egeo.website.template.git#v0.2-rc.0",
+    ...
+  }
+```
+And launch `npm install`. You can also update the library using `npm update egeo.website.template`.
+
+### With Bower
+
+Include the template dependency in the *dependencies* section of your bower.json file:
+```
+  "dependencies": {
+    ...
+    "egeo.ui.base": "git://github.com/Stratio/egeo.website.template.git#v0.2-rc.0",
+    ...
+  }
+```
+And launch `bower install`. You can also update the library using `bower update egeo.website.template`.
+
 ## Compile the template
 
 You can compile the template to generate a distribution ready to be deployed using the command below:
