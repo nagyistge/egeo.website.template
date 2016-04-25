@@ -18,7 +18,7 @@ Include the template dependency in the *dependencies* section of your package.js
 ```
   "dependencies": {
     ...
-    "egeo.ui.base": "git://github.com/Stratio/egeo.website.template.git#v0.2-rc.0",
+    "egeo.website.template": "git://github.com/Stratio/egeo.website.template.git#v0.2-rc.0",
     ...
   }
 ```
@@ -30,7 +30,7 @@ Include the template dependency in the *dependencies* section of your bower.json
 ```
   "dependencies": {
     ...
-    "egeo.ui.base": "git://github.com/Stratio/egeo.website.template.git#v0.2-rc.0",
+    "egeo.website.template": "git://github.com/Stratio/egeo.website.template.git#v0.2-rc.0",
     ...
   }
 ```
