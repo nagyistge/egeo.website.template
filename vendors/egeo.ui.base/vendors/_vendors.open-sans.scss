@@ -2,11 +2,11 @@
 //
 // The Open Sans font in a Sass format to be imported easily in any project.
 //
-// <div class="compatibility">This vendor uses @font-face. Check the compatibility [here](section-2.html#section-2.4).</div>
-//
 // | Variable                                                   | Default value                                     | Description                                                                  |
 // | ---------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------- |
 // | <div class="egeo-u-tx-align--left">$egeo-open-sans</div>    | <div class="egeo-u-tx-align--left">`true`</div>    | Tell to the framework wheter or not the font Open Sans have to be installed. |
+//
+// <div class="compatibility">This vendor uses @font-face. Check the compatibility [here](section-2.html#section-2.4).</div>
 //
 // ## Dependencies
 //
@@ -27,7 +27,7 @@ $egeo-open-sans: true !default;
     // Regular
     @font-face {
         font-family: 'Open Sans';
-        
+
         src: url($egeo-fontface-src + '/open-sans/OpenSans-Regular-webfont.eot');
         src: url($egeo-fontface-src + '/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
              url($egeo-fontface-src + '/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
@@ -147,5 +147,5 @@ $egeo-open-sans: true !default;
              url($egeo-fontface-src + '/open-sans/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
         font-weight: 900;
         font-style: italic;
-    }    
+    }
 }

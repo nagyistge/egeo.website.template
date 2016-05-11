@@ -9,7 +9,7 @@ $this: '#{$egeo-namespace}c-checkbox';
     width: initial;
 
     @if $egeo-c-label {
-        + .egeo-c-label {
+        + span > .egeo-c-label {
             cursor: pointer;
             display: inline-block;
             width: initial;
